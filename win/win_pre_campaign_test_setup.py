@@ -17,6 +17,7 @@ end_process_by_name('Photoshop.exe')
 
 # Stop Creative Cloud Process
 end_process_by_name('Creative Cloud.exe')
+end_process_by_name('Creative Cloud Content Manager.exe')
 
 # Delete CCX Welcome
 delete_directory("AppData\\Roaming\\Adobe\\CCX Welcome")

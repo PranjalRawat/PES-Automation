@@ -28,14 +28,14 @@ def end_process_by_name(process_name):
     # Find all processes with the specified name
     for proc in psutil.process_iter(['pid', 'name']):
         try:
-            if proc.info['name'] == process_name:
+            if process_name == proc.info['name']:
                 process_found = True
                 proc.terminate()
                 print_progress_bar(5)
-                style_message(f"Process terminated successfully ==>> '{process_name}': (PID: {proc.info['pid']})", 'green')
+                style_message(f"Process terminated successfully ==>> '{proc.info['name']}': (PID: {proc.info['pid']})", 'green')
 
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess) as e:
-            style_message(f"Error terminating process ==>> '{process_name}': {e}", 'red')
+            style_message(f"Error terminating process ==>> '{proc.info['name']}': {e}", 'red')
 
     if not process_found:
         style_message(f"Process is not running ==>> '{process_name}'", 'cyan')

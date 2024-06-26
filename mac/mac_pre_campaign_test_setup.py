@@ -17,6 +17,7 @@ end_process_by_name('Adobe Photoshop 2024')
 
 # Stop Creative Cloud Process
 end_process_by_name('Creative Cloud')
+end_process_by_name('Creative Cloud Content Manager.node')
 
 # Delete CCX Welcome
 delete_directory('Library/Caches/Adobe/CCX Welcome')
