@@ -49,6 +49,10 @@ As Quality Engineers we are responsible for testing the PES campaigns. Below are
     ```bash
     python3 mac/mac_get_hs_campaign_id.py
     ```
+  - **Get Discover Panel Campaign and Variant Ids** - Executing get dp campaign id script to fetch campaign and variant id
+    ```bash
+    python3 mac/mac_get_dp_campaign_id.py
+    ```
 
 - ### Win
 
@@ -68,4 +72,8 @@ As Quality Engineers we are responsible for testing the PES campaigns. Below are
   - **Get HomeScreen Campaign and Variant Ids** - Executing get hs campaign id script to fetch campaign and variant id
     ```bash
     python3 win\win_get_hs_campaign_id.py
+    ```
+  - **Get Discover Panel Campaign and Variant Ids** - Executing get dp campaign id script to fetch campaign and variant id
+    ```bash
+    python3 win\win_get_dp_campaign_id.py
     ```

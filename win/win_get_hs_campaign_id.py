@@ -9,7 +9,8 @@ from visualize import visualize_message, style_message
 
 visualize_message("Start Fetching Campaign Id and Variant Id", '█', '-', 100)
 
-hosts = ['PHXS', 'PHSP']
+hosts = ['PHXS', 'PHSPBETA']
+
 for host in hosts:
     json_files = get_host_json('AppData\\Roaming\\Adobe\\CCX Welcome\\data', host)
 
