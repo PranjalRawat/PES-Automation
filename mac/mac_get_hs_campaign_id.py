@@ -9,18 +9,21 @@ from visualize import visualize_message, style_message
 
 visualize_message("Start Fetching Campaign Id and Variant Id", '█', '-', 100)
 
+hosts = ['PHXS', 'PHSP']
 
-json_files = get_host_json('Library/Caches/Adobe/CCX Welcome/data', 'PHXS')
+for host in hosts:
+    json_files = get_host_json('Library/Caches/Adobe/CCX Welcome/data', host)
 
-if not json_files:
-    style_message('Json file not present for the host', 'red')
+    if not json_files:
+        style_message('Json file not present for the host', 'red')
 
-for files in json_files:
-    host = (files.split('/')[-1]).split('-')[:3]
-    style_message(host, 'yellow')
-    get_campaign_ids(files, 'CCX_Start_4.0_Toast')
-    get_campaign_ids(files, 'CCX_Start_4.0_Whats_New')
-    get_campaign_ids(files, 'CCX_Start_4.0_Home')
+    for files in json_files:
+        host = (files.split('/')[-1]).split('-')[:3]
+        print('')
+        style_message(host, 'yellow')
+        get_campaign_ids(files, 'CCX_Start_4.0_Toast')
+        get_campaign_ids(files, 'CCX_Start_4.0_Whats_New')
+        get_campaign_ids(files, 'CCX_Start_4.0_Home')
 
 
 
