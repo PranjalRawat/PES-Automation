@@ -1,0 +1,39 @@
+{
+    "Darwin" : {
+        "CCD" : "Creative Cloud",
+        "CCCM" : "Creative Cloud Content Manager.node",
+        "CCXWelcome" : "Library/Caches/Adobe/CCX Welcome",
+        "PluginStorage" : "Library/Application Support/Adobe/UXP/PluginsStorage",
+        "DiscoverPanel" : "Library/Caches/Adobe/CCX Welcome/discover_panel",
+        "HomescreenData" : "Library/Caches/Adobe/CCX Welcome/data",
+        "PHXS" : {
+            "Title" : "Adobe Photoshop 2024",
+            "Settings" : "Library/Preferences/Adobe Photoshop 2024 Settings",
+            "Paths" : "Library/Preferences/Adobe Photoshop 2024 Paths"
+        },
+        "PHSPBETA" : {
+            "Title" : "Adobe Photoshop 2024",
+            "Settings" : "Library/Preferences/Adobe Photoshop (Beta) Settings",
+            "Paths" : "Library/Preferences/Adobe Photoshop 2024 Paths"
+        }
+    },
+
+    "win" : {
+        "CCD" : "Creative Cloud.exe",
+        "CCCM" : "CCXProcess.exe",
+        "CCXWelcome" : "AppData\\Roaming\\Adobe\\CCX Welcome",
+        "PluginStorage" : "AppData\\Roaming\\Adobe\\UXP\\PluginsStorage",
+        "DiscoverPanel" : "AppData\\Roaming\\Adobe\\CCX Welcome\\discover_panel",
+        "HomescreenData" : "AppData\\Roaming\\Adobe\\CCX Welcome\\data",
+        "PHXS" : {
+            "Title" : "Photoshop.exe",
+            "Settings" : "AppData\\Roaming\\Adobe\\Adobe Photoshop 2024",
+            "Paths" : "AppData\\Roaming\\Adobe\\Adobe Photoshop 2024 Paths"
+        },
+        "PHSPBETA" : {
+            "Title" : "Photoshop.exe",
+            "Settings" : "AppData\\Roaming\\Adobe\\Adobe Photoshop (Beta)",
+            "Paths" : "AppData\\Roaming\\Adobe\\Adobe Photoshop 2024 Paths"
+        }
+    }
+}
