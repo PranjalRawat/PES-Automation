@@ -2,9 +2,14 @@ import sys
 import os
 import json
 import platform
+import argparse
 
 # Add the utils directory to the system path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'utils')))
+
+# Create the parser
+parser = argparse.ArgumentParser(description="command-line arguments.")
+parser.add_argument('--host', type=str, help='Host Application Code', required=False)
 
 from dp_campaign import get_campaign_ids, get_host_json
 from visualize import visualize_message, style_message
@@ -19,7 +24,9 @@ visualize_message("Start Fetching Discover Panel Campaign Id and Variant Id", 'â
 platform = platform.system()
 sep = '\\' if platform == 'Windows' else '/'
 
-host = 'PHXS'
+# Parse the arguments
+args = parser.parse_args()
+host = args.host or 'PHXS'
 
 json_files = get_host_json(data[platform]['DiscoverPanel'], host)
 
