@@ -1,8 +1,9 @@
 import shutil
 import os
 from visualize import style_message
+import time
 
-def delete_directory(relative_path):
+def delete_directory(relative_path, retries = 3):
     """
     Deletes the specified directory and all its contents.
 
@@ -17,11 +18,15 @@ def delete_directory(relative_path):
             shutil.rmtree(directory_path)
             style_message(f"Directory has been deleted successfully ===>> '{directory_path}'", 'green')
         except Exception as e:
-            style_message(f"Error: {e}", 'red')
+            if retries > 0:
+                time.sleep(2)
+                delete_directory(relative_path, retries-1)
+            else:
+                style_message(f"Error: {e}", 'red')
     else:
         style_message(f"The directory does not exist ==>> '{directory_path}'", 'cyan')
 
-def delete_file(relative_path):
+def delete_file(relative_path, retries = 3):
     """
     Deletes the specified file.
 
@@ -35,6 +40,10 @@ def delete_file(relative_path):
             os.remove(file_path)
             style_message(f"File has been deleted successfully ===>> '{file_path}'", 'green')
         except Exception as e:
-            style_message(f"Error: {e}", 'red')
+            if retries > 0:
+                time.sleep(2)
+                delete_file(relative_path, retries-1)
+            else:
+                style_message(f"Error: {e}", 'red')
     else:
         style_message(f"The file does not exist ==>> '{file_path}'", 'cyan')
