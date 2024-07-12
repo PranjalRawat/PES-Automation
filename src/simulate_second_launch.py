@@ -31,8 +31,8 @@ host = args.host or 'PHXS'
 # Stop Adobe Host Application
 end_process_by_name(data[platform][host]['Title'])
 
-# Delete CCX Welcome
-delete_directory(data[platform]['CCXWelcome'])
+# Delete CCX Welcome Data Folder
+delete_directory(data[platform]['HomescreenData'])
 
 
 visualize_message("Completed Second Launch Simulation", '-', '█', 100)
